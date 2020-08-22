@@ -19,6 +19,7 @@ export function Post() {
 
    if (loading) return <p>Loading...</p>;
    if (error) return <p>Error :(</p>;
+      
    return data.posts.map(({ id, title }) => (
       <div key={id}>
          <p>

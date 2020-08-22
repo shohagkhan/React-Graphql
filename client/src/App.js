@@ -2,6 +2,8 @@ import React from 'react'
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { Post } from './components/Post';
+import { MDBContainer} from 'mdbreact';
+import { Table } from './components/Table';
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000/',
@@ -11,9 +13,12 @@ const client = new ApolloClient({
 export const App = () => {
   return (
     <ApolloProvider client={client}>
-      <div>
+      {/* <div>
         <Post />
-      </div>
+      </div> */}
+      <MDBContainer>
+        <Table/>
+      </MDBContainer>
     </ApolloProvider>
   )
 }
